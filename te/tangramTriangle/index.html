@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Adaptable</title>
+<style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Layout general */
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Ocupa toda la ventana */
+      /* font-family: sans-serif; */
+			font-family: Helvetica, Arial, sans-serif;
+  		font-size: 14px;
+    }
+
+		header {
+      display: flex;
+      justify-content: center;
+			height: 80px;
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      flex: 1; /* Ocupa todo el espacio restante */
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+		footer {
+			display: flex; 
+			height: 110px; 
+			border-top: 1px solid #ccc;
+			width: 100%; 
+		}
+
+		footer #left {
+			width: 120px; 
+			display: flex; 
+			flex-direction: column; 
+			justify-content: center; 
+			align-items: start; 
+			border-right: 1px solid #ccc;
+		}
+
+		footer #right {
+			flex: 1; 
+			display: flex; 
+			flex-direction: row; 
+			justify-content: flex-start; 
+			align-items: center; 
+			padding: 10px;
+			gap: 15px;
+
+			overflow-x: auto;     /* Habilita scroll horizontal */
+			overflow-y: hidden;   /* Oculta scroll vertical si no es necesario */
+			white-space: nowrap;  /* Evita que el contenido baje a otra línea */
+		}
+
+		footer #right svg {
+			width: 80px;
+  		height: 70px;
+		} 
+		footer #right .tangram-tile.active {
+			display: flex; /* o block, según necesites */
+      background-color: #d0d0d0;
+		} 
+
+		footer #right .tangram-footer-wrap {
+			display: none; /* o block, según necesites */
+		}
+		footer #right .tangram-footer-wrap.active {
+			display: flex; /* o block, según necesites */
+		}
+
+		footer #left button {
+			position: relative;
+			width: 100%;
+			border: none;
+			text-align: left;
+			padding-left: 10px;
+			background-color: transparent;
+			font-size: 14px;
+			height: 26px !important;
+		}
+		footer #left button.active {
+			background: #3a3645;
+			color: #fff;
+		}
+
+		footer #left button.active.active:after {
+			border-bottom: 15px solid transparent;
+			border-left: 6px solid #3a3645;
+			border-top: 15px solid transparent;
+			content: "";
+			display: block;
+			left: 100%;
+			margin-top: -15px;
+			position: absolute;
+			top: 50%;
+		}
+
+
+		footer #right .tangram-tile {
+			flex: 1; 
+			display: flex; 
+			flex-direction: column; 
+			justify-content: center; 
+			align-items: center; 
+		}
+
+		#menubar {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  background: #eee;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  top: 0;
+}
+
+#menubar .menu {
+  /* margin-left: 64px; */
+  margin-left: 24px!important;
+  float: left;
+  cursor: pointer;
+  padding-right: 8px;
+}
+#menubar .menu:first-child {
+  margin-left: 4px!important;
+}
+
+#menubar .menu .title {
+  display: inline-block;
+  color: #888;
+  margin: 0;
+  padding: 8px;
+  line-height: 16px;
+}
+
+#menubar .menu .options {
+  position: fixed;
+  display: none;
+  padding: 5px 0;
+  background: #eee;
+  width: 150px;
+  max-height: calc(100% - 80px);
+  overflow: auto;
+  width: auto;
+}
+
+#menubar .menu:hover .options {
+  display: block;
+}
+
+#menubar .menu .options .option {
+  color: #666;
+  background-color: transparent;
+  padding: 5px 10px;
+  margin: 0 !important;
+}
+
+#menubar .menu a {
+  display: inline-block;
+  color: #888;
+  margin: 0;
+  padding: 8px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+#menubar .menu .options .option:hover {
+  color: #fff;
+  background-color: #08f;
+}
+
+#menubar .menu .options .option:hover a {
+  color: #fff;
+}
+
+a.logoTeiDSpace {
+  padding: 0 !important;
+  float: left;
+  width: 110px;
+}
+a.logoTeiDSpace img {
+  height: 32px;
+  float: left;
+}
+.logoText {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.Panel {
+  user-select: none;
+}
+
+#leftbar {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  width: 32px;
+  text-align: center;
+}
+#leftbar .Panel {
+  margin-top: 20px;
+  position: relative;
+  background-color: #eee;
+}
+
+#leftbar .Panel button {
+  height: 32px;
+}
+#leftbar .Panel button img {
+  width: 16px;
+}
+
+
+#leftbar .Panel .Button.selected::after {
+  color: #000000;
+  background-color: #fff;
+  filter: none;
+}
+
+#TeideLogo {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: transparent;
+}
+#TeideLogo img {
+  width: 32px;
+  height: 32px;
+}
+
+#TeideLogo .Button{
+  background-color: transparent;
+}
+
+#TeideLogo .Button[data-title]:hover:after {
+  content: attr(data-title);
+  position: absolute;
+  padding: 8px;
+  left: -91px;
+  top: 5px;
+  background-color: #ffffff;
+  height: 16px;
+}
+  </style>
+  <script type="module" crossorigin src="/te/tangramTriangle/js/index.js"></script>
+</head>
+<body>
+  <!-- <header>
+		<h1>Editor de Tangram</h1>
+  </header> -->
+	<!-- <div class="tangram-tile" data-key="house">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.2 -1.2 2.4 2.4" width="1000" height="1000"><polygon points="0,0 1,1 1,-1" fill="#c0c0c0"/></svg>
+	</div> -->
+
+  <main id='three-canvas'>
+    <!-- Zona central adaptable -->
+		<!-- Three.js inyectará el canvas aquí -->
+    <!-- <canvas id="three-canvas"></canvas>  -->
+  </main>
+  <footer>
+    <div id="left">
+			<button class="active" data-target="4">Polígonos</button>
+		</div>
+		<div id="right" >
+			<div class="tangram-footer-wrap active" data-display="flex" data-v="0">
+				<div class="tangram-tile" data-key="triangleGrande" data-v="0"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(-0.6667 0) scale(1 1)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g><p>Triángulo</p><p>grande</p></div>
+
+				<div class="tangram-tile" data-key="triangleMediano"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(-0.6667 0) scale(0.75 0.75)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g><p>Triángulo</p><p>mediano</p></div>
+
+				<div class="tangram-tile" data-key="trianglePequeno"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(-0.6667 0) scale(0.5 0.5)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g><p>Triángulo</p><p>pequeño</p></div>
+
+				<div class="tangram-tile" data-key="cuadrado"><svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000"><g transform="translate(-1.5 -1.3) scale(2.5 2.5)"><polygon points="0,0 0,1 1,1 1,0" fill="black"/></svg></g><p style="margin-bottom: 17px">Cuadrado</p></div>
+
+				<div class="tangram-tile" data-key="paralelogramo"><svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000"><g transform="translate(-2.2 -1.3) scale(2.5 2.5)"><polygon points="0,0 1,1 2,1 1,0" fill="black"/></svg></g><p style="margin-bottom: 17px">Paralelogramo</p></div>
+			</div>
+
+		</div>
+  </footer>
+	
+	
+</body>
+</html>

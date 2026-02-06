@@ -1,0 +1,179 @@
+{
+    "menu": [
+        { 
+            "title": "TeiDSpace",
+            "type": "UIImage",
+            "img": "../assets/icons/logo_TEIDSPACE.png",
+            "link": "../TeiDSpace/index.html",
+            "classes": ["menu", "logo"],
+            "permission": 0,
+            "subMenu": []
+        },
+        { 
+            "title": "menubar/soma",
+            "type": "UIPanel",
+            "img": "",
+            "link": "",
+            "classes": ["title"],
+            "permission": 0,
+            "subMenu": [
+                {
+                    "title": "menubar/somabuilding",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../somaConstruccion/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/soma",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../soma/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/soma6viewsexamples",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../soma6VistasEjemplos/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/soma6viewsexercises",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../soma6VistasEjercicios/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                }
+            ]
+        },
+        { 
+            "title": "menubar/views",
+            "type": "UIPanel",
+            "img": "",
+            "link": "",
+            "classes": ["title"],
+            "permission": 0,
+            "subMenu": [
+                {
+                    "title": "menubar/examples",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../vistasEjemplos/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/exercices",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../vistasEjercicios/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/somaexercises",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../vistasEjerciciosSoma/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/correction",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../vistasCorreccion/index.html",
+                    "classes": ["option"],
+                    "permission": 100        
+                }
+            ]
+        },
+        { 
+            "title": "menubar/isometric",
+            "type": "UIPanel",
+            "img": "",
+            "link": "",
+            "classes": ["title"],
+            "permission": 0,
+            "subMenu": [
+                {
+                    "title": "menubar/examples",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../isometricoEjemplos/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/exercices",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../isometricoEjercicios/index.html",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/correction",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../isometricoCorreccion/index.html",
+                    "classes": ["option"],
+                    "permission": 100        
+                }
+            ]
+        },
+        { 
+            "title": "menubar/pieces",
+            "type": "UIPanel",
+            "img": "",
+            "link": "",
+            "classes": ["title"],
+            "permission": 100,
+            "subMenu": [
+                {
+                    "title": "menubar/generator",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "../create/index.html",
+                    "classes": ["option"],
+                    "permission": 100        
+                }
+            ]
+
+        },
+        { 
+            "title": "menubar/help",
+            "type": "UIPanel",
+            "img": "",
+            "link": "",
+            "classes": ["title"],
+            "permission": 0,
+            "subMenu": [
+                {
+                    "title": "menubar/helptutorials",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "",
+                    "classes": ["option"],
+                    "permission": 0        
+                },
+                {
+                    "title": "menubar/helpaboutus",
+                    "type": "UIPanel",
+                    "img": "",
+                    "link": "",
+                    "classes": ["option"],
+                    "permission": 0        
+                }
+            ]
+
+        }
+
+
+    ]
+}

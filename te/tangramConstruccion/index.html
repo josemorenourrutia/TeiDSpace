@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Adaptable</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Layout general */
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh; /* Ocupa toda la ventana */
+      /* font-family: sans-serif; */
+			font-family: Helvetica, Arial, sans-serif;
+  		font-size: 14px;
+    }
+		header {
+      display: flex;
+      justify-content: center;
+			height: 60px;
+      background-color: #333;
+      color: white;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    main {
+      flex: 1; /* Ocupa todo el espacio restante */
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+		/* footer {
+			display: flex; 
+			height: 40px; 
+			border-top: 1px solid #ccc;
+			width: 100%; 
+		} */
+    		#menubar {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  background: #eee;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  top: 0;
+}
+
+#menubar .menu {
+  /* margin-left: 64px; */
+  margin-left: 24px!important;
+  float: left;
+  cursor: pointer;
+  padding-right: 8px;
+}
+#menubar .menu:first-child {
+  margin-left: 4px!important;
+}
+
+#menubar .menu .title {
+  display: inline-block;
+  color: #888;
+  margin: 0;
+  padding: 8px;
+  line-height: 16px;
+}
+
+#menubar .menu .options {
+  position: fixed;
+  display: none;
+  padding: 5px 0;
+  background: #eee;
+  width: 150px;
+  max-height: calc(100% - 80px);
+  overflow: auto;
+  width: auto;
+}
+
+#menubar .menu:hover .options {
+  display: block;
+}
+
+#menubar .menu .options .option {
+  color: #666;
+  background-color: transparent;
+  padding: 5px 10px;
+  margin: 0 !important;
+}
+
+#menubar .menu a {
+  display: inline-block;
+  color: #888;
+  margin: 0;
+  padding: 8px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+#menubar .menu .options .option:hover {
+  color: #fff;
+  background-color: #08f;
+}
+
+#menubar .menu .options .option:hover a {
+  color: #fff;
+}
+
+a.logoTeiDSpace {
+  padding: 0 !important;
+  float: left;
+  width: 110px;
+}
+a.logoTeiDSpace img {
+  height: 32px;
+  float: left;
+}
+.logoText {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.Panel {
+  user-select: none;
+}
+
+
+#TeideLogo .Button{
+  background-color: transparent;
+}
+
+#TeideLogo .Button[data-title]:hover:after {
+  content: attr(data-title);
+  position: absolute;
+  padding: 8px;
+  left: -91px;
+  top: 5px;
+  background-color: #ffffff;
+  height: 16px;
+}
+
+  </style>
+  <script type="module" crossorigin src="/te/tangramConstruccion/js/index.js"></script>
+</head>
+<body>
+  <!-- <header>
+		<h1>Editor de Tangram</h1>
+  </header> -->
+  <main id='three-canvas'>
+  </main>
+  <!-- <footer>
+  </footer> -->
+	
+</body>
+</html>
