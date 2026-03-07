@@ -125,158 +125,148 @@
 		}
 
 		#menubar {
-  position: absolute;
-  width: 100%;
-  height: 32px;
-  background: #eee;
-  padding: 0;
-  margin: 0;
-  right: 0;
-  top: 0;
-}
+      position: absolute;
+      width: 100%;
+      height: 32px;
+      background: #eee;
+      padding: 0;
+      margin: 0;
+      right: 0;
+      top: 0;
+    }
 
-#menubar .menu {
-  /* margin-left: 64px; */
-  margin-left: 24px!important;
-  float: left;
-  cursor: pointer;
-  padding-right: 8px;
-}
-#menubar .menu:first-child {
-  margin-left: 4px!important;
-}
+    #menubar .menu {
+      /* margin-left: 64px; */
+      margin-left: 24px!important;
+      float: left;
+      cursor: pointer;
+      padding-right: 8px;
+    }
+    #menubar .menu:first-child {
+      margin-left: 4px!important;
+    }
 
-#menubar .menu .title {
-  display: inline-block;
-  color: #888;
-  margin: 0;
-  padding: 8px;
-  line-height: 16px;
-}
+    #menubar .menu .title {
+      display: inline-block;
+      color: #888;
+      margin: 0;
+      padding: 8px;
+      line-height: 16px;
+    }
 
-#menubar .menu .options {
-  position: fixed;
-  display: none;
-  padding: 5px 0;
-  background: #eee;
-  width: 150px;
-  max-height: calc(100% - 80px);
-  overflow: auto;
-  width: auto;
-}
+    #menubar .menu .options {
+      position: fixed;
+      display: none;
+      padding: 5px 0;
+      background: #eee;
+      width: 150px;
+      max-height: calc(100% - 80px);
+      overflow: auto;
+      width: auto;
+    }
 
-#menubar .menu:hover .options {
-  display: block;
-}
+    #menubar .menu:hover .options {
+      display: block;
+    }
 
-#menubar .menu .options .option {
-  color: #666;
-  background-color: transparent;
-  padding: 5px 10px;
-  margin: 0 !important;
-}
+    #menubar .menu .options .option {
+      color: #666;
+      background-color: transparent;
+      padding: 5px 10px;
+      margin: 0 !important;
+    }
 
-#menubar .menu a {
-  display: inline-block;
-  color: #888;
-  margin: 0;
-  padding: 8px;
-  line-height: 16px;
-  text-decoration: none;
-}
+    #menubar .menu a {
+      display: inline-block;
+      color: #888;
+      margin: 0;
+      padding: 8px;
+      line-height: 16px;
+      text-decoration: none;
+    }
 
-#menubar .menu .options .option:hover {
-  color: #fff;
-  background-color: #08f;
-}
+    #menubar .menu .options .option:hover {
+      color: #fff;
+      background-color: #08f;
+    }
 
-#menubar .menu .options .option:hover a {
-  color: #fff;
-}
+    #menubar .menu .options .option:hover a {
+      color: #fff;
+    }
 
-a.logoTeiDSpace {
-  padding: 0 !important;
-  float: left;
-  width: 110px;
-}
-a.logoTeiDSpace img {
-  height: 32px;
-  float: left;
-}
-.logoText {
-  margin-top: 8px;
-  font-weight: bold;
-}
-.Panel {
-  user-select: none;
-}
+    a.logoTeiDSpace {
+      padding: 0 !important;
+      float: left;
+      width: 110px;
+    }
+    a.logoTeiDSpace img {
+      height: 32px;
+      float: left;
+    }
+    .logoText {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    .Panel {
+      user-select: none;
+    }
 
-#leftbar {
-  position: absolute;
-  left: 10px;
-  top: 20px;
-  width: 32px;
-  text-align: center;
-}
-#leftbar .Panel {
-  margin-top: 20px;
-  position: relative;
-  background-color: #eee;
-}
+    #leftbar {
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      width: 32px;
+      text-align: center;
+    }
+    #leftbar .Panel {
+      margin-top: 20px;
+      position: relative;
+      background-color: #eee;
+    }
 
-#leftbar .Panel button {
-  height: 32px;
-}
-#leftbar .Panel button img {
-  width: 16px;
-}
+    #leftbar .Panel button {
+      height: 32px;
+    }
+    #leftbar .Panel button img {
+      width: 16px;
+    }
 
 
-#leftbar .Panel .Button.selected::after {
-  color: #000000;
-  background-color: #fff;
-  filter: none;
-}
+    #leftbar .Panel .Button.selected::after {
+      color: #000000;
+      background-color: #fff;
+      filter: none;
+    }
 
-#TeideLogo {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background-color: transparent;
-}
-#TeideLogo img {
-  width: 32px;
-  height: 32px;
-}
+    #TeideLogo {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background-color: transparent;
+    }
+    #TeideLogo img {
+      width: 32px;
+      height: 32px;
+    }
 
-#TeideLogo .Button{
-  background-color: transparent;
-}
+    #TeideLogo .Button{
+      background-color: transparent;
+    }
 
-#TeideLogo .Button[data-title]:hover:after {
-  content: attr(data-title);
-  position: absolute;
-  padding: 8px;
-  left: -91px;
-  top: 5px;
-  background-color: #ffffff;
-  height: 16px;
-}
+    #TeideLogo .Button[data-title]:hover:after {
+      content: attr(data-title);
+      position: absolute;
+      padding: 8px;
+      left: -91px;
+      top: 5px;
+      background-color: #ffffff;
+      height: 16px;
+    }
   </style>
   <script type="module" crossorigin src="js/index.js"></script>
 </head>
 <body>
-  <!-- <header>
-		<h1>Editor de Tangram</h1>
-  </header> -->
-	<!-- <div class="tangram-tile" data-key="house">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.2 -1.2 2.4 2.4" width="1000" height="1000"><polygon points="0,0 1,1 1,-1" fill="#c0c0c0"/></svg>
-	</div> -->
-
   <main id='three-canvas'>
-    <!-- Zona central adaptable -->
-		<!-- Three.js inyectará el canvas aquí -->
-    <!-- <canvas id="three-canvas"></canvas>  -->
   </main>
   <footer>
     <div id="left">
@@ -284,16 +274,58 @@ a.logoTeiDSpace img {
 		</div>
 		<div id="right" >
 			<div class="tangram-footer-wrap active" data-display="flex" data-v="0">
-				<div class="tangram-tile" data-key="triangleGrande" data-v="0"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(-0.6667 0) scale(1 1)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g><p>Triángulo</p><p>grande</p></div>
+				<div class="tangram-tile" data-key="triangleGrande" data-v="0">
+          <svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000">
+            <g transform="translate(0 -0.5) rotate(90)">
+              <polygon points="0,0 1,1 1,-1" fill="black" />
+            </g>
+          </svg>
+          <p>Big<p></p>triangle</p>
+        </div>
 
-				<div class="tangram-tile" data-key="triangleMediano"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(-0.6667 0) scale(0.75 0.75)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g><p>Triángulo</p><p>mediano</p></div>
+				<div class="tangram-tile" data-key="triangleMediano"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(0 -0.25) scale(0.75 0.75) rotate(90)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g>
+          <p>Medium<p></p>triangle</p>
+        </div>
 
-				<div class="tangram-tile" data-key="trianglePequeno"><svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000"><g transform="translate(-0.6667 0) scale(0.5 0.5)"><polygon points="0,0 1,1 1,-1" fill="black"/></svg></g><p>Triángulo</p><p>pequeño</p></div>
+				<div class="tangram-tile" data-key="trianglePequeno">
+          <svg alt="" height="1000" viewBox="-1.2 -1.2 2.4 2.4" width="1000">
+            <g transform="translate(0 -0.05) scale(0.5 0.5) rotate(90)">
+              <polygon points="0,0 1,1 1,-1" fill="black"/>
+            </g>
+          </svg>
+        <p>Small<p></p>triangle</p>
+        </div>
 
-				<div class="tangram-tile" data-key="cuadrado"><svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000"><g transform="translate(-1.5 -1.3) scale(3.6 3.6)"><polygon points="0,0 0,1 1,1 1,0" fill="black"/></svg></g><p style="margin-bottom: 17px">Cuadrado</p></div>
+        <div class="tangram-tile" data-key="cuadrado">
+          <svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000">
+            <g transform="translate(-2.5 -2.5) scale(5.05 5.05)">
+              <polygon points="0,0 0,1 1,1 1,0" fill="black"/>
+            </g>
+          </svg>
+          <p style="margin-bottom: 17px">Tangram</p>
+        </div>
 
-				<div class="tangram-tile" data-key="paralelogramo"><svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000"><g transform="translate(-2.2 -1.3) scale(2.5 2.5)"><polygon points="0,0 1,1 2,1 1,0" fill="black"/></svg></g><p style="margin-bottom: 17px">Paralelogramo</p></div>
-			</div>
+				<div class="tangram-tile" data-key="cuadrado">
+          <svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000">
+            <g transform="translate(-1.5 -1.3) scale(3.6 3.6)">
+              <polygon points="0,0 0,1 1,1 1,0" fill="black"/>
+            </g>
+          </svg>
+          <p style="margin-bottom: 17px">Square</p>
+        </div>
+
+				<div class="tangram-tile" data-key="romboide"><svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000"><g transform="translate(-2.8 -1) scale(2.5 2.5)"><polygon points="0,0 1,1 2,1 1,0" fill="black"/></svg></g><p>Big<p></p>Rhomboid</p></div>
+
+				<div class="tangram-tile" data-key="romboide">
+          <svg alt="" height="1000" viewBox="-3 -3 6 6" width="1000">
+            <g transform="translate(-2.8 -1) scale(1.825 1.825)">
+              <polygon points="0,0 1,1 2,1 1,0" fill="black"/>
+            </g>
+          </svg>
+          <p style="margin-bottom: 17px">Rhomboid</p>
+        </div>
+
+      </div>
 
 		</div>
   </footer>
